@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ch12-08</title>
+    <link rel="stylesheet"
+      href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <style> 
+      .author {text-align:right; margin:0;} 
+      #my_tabs{height:16em;} /* 設定標籤頁元件的高度 */
+    </style>
+</head>
+<body>
+<div id="my_tabs"> <!-- 利用 div 建立標籤頁元件 -->
+  <ul> <!-- 利用 ul, li 建立換頁標籤, 以 a 建立各頁內容的 id -->
+  	<li><a href="#poem1"><span>秋夕</span></a></li>
+  	<li><a href="#poem2"><span>天淨沙</span></a></li>
+  	<li><a href="#poem3"><span>飲酒詩</span></a></li>
+  </ul>
+  
+  <!-- 用 div 建立頁面內容, id 屬性需與上列 href 屬性對應 -->
+  <div id="poem1">  <!-- 第 1 頁的內容 -->
+  	<h5 class="author">杜牧</h5>
+　　<p>銀燭秋光冷畫屏，輕羅小扇撲流螢。</p>
+　　<p>天階夜色涼如水，坐看牽牛織女星。</p>
+  </div>               
+  
+  <div id="poem2">  <!-- 第 2 頁的內容 -->
+    <h5 class="author">馬致遠</h5>
+  	<h3>枯藤老樹昏鴉，</h3><h3>小橋流水人家，</h3>
+    <h3>古道西風瘦馬。</h3><h3>夕陽西下，</h3>
+    <h3>斷腸人在天涯。</h3> 
+  </div>
+  
+  <div id="poem3">  <!-- 第 3 頁的內容 -->
+    <h5 class="author">陶淵明</h5>
+    <h4>結廬在人境，而無車馬喧；<h4>
+    <h4>問君何能爾？心遠地自偏。<h4>
+    <h4>採菊東籬下，悠然見南山；<h4>
+    <h4>山氣日夕佳，飛鳥相與還。</h4>
+    <h4>此中有真意，欲辯已忘言。</h4>
+  </div>
+</div>
+<script>
+$('#my_tabs').tabs({event:'mouseover',   // 滑鼠移到標籤上即換頁
+                    heightStyle:'fill',  // 頁面高度以最高的頁面為準
+                    show:'slideDown'});  // 顯示時有下拉的特效
+</script>
+</body>
+</html>
