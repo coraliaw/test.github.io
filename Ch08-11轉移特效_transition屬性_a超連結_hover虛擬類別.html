@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Ch08-11轉移特效_transition屬性_a超連結_hover虛擬類別</title>
+	<!--transition有4種屬性
+		1.transition-duration:轉移過程的時間長度,預設是0秒(一般設定此值)
+		2.transition-delay:轉移延遲多久才開始,預設是0秒(s);毫秒(ms)
+		3.transition-property:轉移的屬性,預設:所有屬性
+		4.transition-timing-function:指定轉移過程的變化速率, 可使ˇ用下列函式名稱:
+			ease:先快後慢(預設)
+			ease-in:先慢後快
+			ease-out:先快後慢(前段加速的部份較ease稍緩
+			linear:以一致的速度變化-->
+    <style>
+    img {
+        width:0px;         /* 圖片大小預設為 0 */
+        position:absolute;
+        left:210px;
+        transition: 0.5s;  /* 轉移時間 0.5 秒 */
+        }
+    h2  {margin:5px; color:navy}
+    li  {width:180px;}
+    a   {transition: 0.5s;} /* 轉移時間 0.5 秒 */    
+    a:hover {background:lime;}   /*滑鼠所指的 a 元素,背景會變色*/
+    a:hover + img {width:180px;} 
+    /* 滑鼠所指的 a 元素, 其後的圖片大小設為 180px */
+    </style>
+    <base href="https://www.eslite.com">
+</head>
+<body>
+  <h2>新書通報</h2>
+  <ul>
+    <li>
+      <a href="/product/1001113882453540">積木閱讀法 奇蹟 3 步驟 翻轉英文閱讀力!</a>
+      <img src="https://s.eslite.dev/upload/product/l/2681206210004/ec1019876.jpg">
+    </li>
+    <li>
+      <a href="/product/1001113882453538">完全詳解! 免費雲端工具活用事典</a>
+      <img src="https://s.eslite.dev/upload/product/l/2681206208001/509018.jpg">
+    </li>
+    <li>
+      <a href="/product/1001113882632658">設計職人必修Photoshop + Illustrator圖案與背景設計快速攻略</a>
+      <img src="https://s.eslite.dev/Upload/Product/201710/l/636444307200978750.jpg">
+    </li>
+    <li>
+      <a href="/product/1001113882330803">Dropbox．Evernote．Google高效率雲端工作術</a>
+      <img src="https://s.eslite.dev/upload/product/l/2680876992005/336251.jpg">
+    </li>
+  </ul>
+</body>
+</html>

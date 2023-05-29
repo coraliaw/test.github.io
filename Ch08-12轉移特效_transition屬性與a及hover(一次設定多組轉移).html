@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Ch08-12轉移特效_transition屬性與a及hover(一次指定多個轉移)</title>
+	<!--可用transition屬性一次設定各項屬性值
+		也可一次指定多個轉移效果,每一組屬性值需用逗號分開-->
+    <style>
+    img {
+        width:0px;         /* 圖片大小預設為 0 */
+        position:absolute;
+        left:210px;
+        transition: 0.5s;  /* 轉移時間 0.5 秒 */
+        }
+    h2  {margin:5px; color:navy}
+    li  {width:180px;}
+    a   {transition: 2s,            /* 第1組:轉移時間 2 秒   */
+                     4s             /* 第2組:轉移時間 4 秒   */
+                     color          /*       轉移 color 屬性 */
+                     2s;}           /*       延後 2 秒才開始 */
+    a:hover {
+            background:blue;        /* 第1組轉移效果:滑鼠指到超連結文字,先轉移為藍色背景 */
+            color:white;            /* 第2組轉移效果:文字顏色轉移成白色會較慢完成 */
+            }   
+    a:hover + img {width:180px;} 
+    /* 滑鼠所指的 a 元素之後的 img 元素, (圖片) 寬度設為 180px */
+    </style>
+    <base href="https://www.eslite.com">
+</head>
+<body>
+  <h2>新書通報</h2>
+  <ul>
+    <li>
+      <a href="/product/1001113882453540">積木閱讀法 奇蹟 3 步驟 翻轉英文閱讀力!</a>
+      <img src="https://s.eslite.dev/upload/product/l/2681206210004/ec1019876.jpg">
+    </li>
+    <li>
+      <a href="/product/1001113882453538">完全詳解! 免費雲端工具活用事典</a>
+      <img src="https://s.eslite.dev/upload/product/l/2681206208001/509018.jpg">
+    </li>
+    <li>
+      <a href="/product/1001113882632658">設計職人必修Photoshop + Illustrator圖案與背景設計快速攻略</a>
+      <img src="https://s.eslite.dev/Upload/Product/201710/l/636444307200978750.jpg">
+    </li>
+    <li>
+      <a href="/product/1001113882330803">Dropbox．Evernote．Google高效率雲端工作術</a>
+      <img src="https://s.eslite.dev/upload/product/l/2680876992005/336251.jpg">
+    </li>
+  </ul>
+</body>
+</html>
